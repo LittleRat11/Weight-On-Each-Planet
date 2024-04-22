@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #10162e;
+}
+
+.container {
+    width: min(43.75em, 90%);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    color: white;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 2em;
+    font-weight: 600;
+}
+
+.input-container {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container label {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.input-container input {
+    font-size: 1em;
+    width: 6.25em;
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    background-color: #172b5c;
+    color: white;
+}
+
+.container button {
+    font-size: 1em;
+    display: block;
+    background-color: #45bfff;
+    color: white;
+    padding: 1em;
+    margin: 1.5em auto;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* *result */
+
+#result {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.6em;
+    margin-bottom: 2em;
+}
+
+.planet-box {
+    padding: 1em;
+    background-color: #172b5c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.planet-box img {
+    width: 90%;
+    margin: auto;
+}
+
+@media screen and (max-width:600px) {
+    .container {
+        top: 100%;
+        font-size: 15px;
+    }
+    #result {
+        grid-template-columns: repeat(2, 150px);
+        text-align: center;
+        justify-content: center;
+    }
+}
